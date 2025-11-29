@@ -1,0 +1,54 @@
+import React from 'react'
+import { DocsThemeConfig } from 'nextra-theme-docs'
+
+const config: DocsThemeConfig = {
+  logo: (
+    <span style={{ fontWeight: 700, fontSize: '1.2rem' }}>
+      📚 FDU CS 资料共享
+    </span>
+  ),
+  project: {
+    link: 'https://github.com/你的用户名/FDU-Sharing',
+  },
+  docsRepositoryBase: 'https://github.com/你的用户名/FDU-Sharing/tree/main',
+  footer: {
+    text: (
+      <span>
+        Made with ❤️ by FDU CS Students | {new Date().getFullYear()} |{' '}
+        <a href="https://github.com/你的用户名/FDU-Sharing" target="_blank">
+          欢迎贡献
+        </a>
+      </span>
+    ),
+  },
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="复旦大学计算机学院考试资料分享" />
+      <title>FDU CS 资料共享</title>
+    </>
+  ),
+  sidebar: {
+    defaultMenuCollapseLevel: 1,
+    toggleButton: true,
+  },
+  toc: {
+    backToTop: true,
+  },
+  editLink: {
+    text: '在 GitHub 上编辑此页 →'
+  },
+  feedback: {
+    content: '有问题？提交反馈 →',
+    labels: 'feedback',
+  },
+  navigation: {
+    prev: true,
+    next: true,
+  },
+  gitTimestamp: ({ timestamp }) => (
+    <span>最后更新于 {timestamp.toLocaleDateString('zh-CN')}</span>
+  ),
+}
+
+export default config
